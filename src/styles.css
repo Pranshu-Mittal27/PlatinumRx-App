@@ -1,0 +1,67 @@
+/* src/styles.css */
+
+
+body {
+  font-family: 'Lucida Handwriting', cursive;
+}
+
+.board {
+  background: #cc7722;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+.note {
+  background: yellow;
+  color: black;
+  position: absolute;
+  padding: 10px;
+  border: 1px solid black;
+  cursor: default;
+  transition: z-index 0.3s ease-in-out;
+}
+
+.note.pinned {
+  z-index: 1;
+}
+
+.note .content {
+  display: flex;
+  flex-direction: column;
+  margin-top: 25px; /* Change to column layout */
+}
+
+.note input {
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 10px; /* Increase margin for more space */
+}
+
+.note .actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.note button {
+  background: white;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+  margin-top: 5px; /* Add margin between the buttons and the note text */
+}
+
+.note .delete {
+  position: absolute;
+  top: 1px; /* Keep some top margin */
+  right: 5px; /* Adjust to create space from the top and right */
+  background: white;
+  padding: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.note .actions button:not(:last-child) {
+  margin-right: 5px; /* Add margin between the edit and pin buttons */
+}
